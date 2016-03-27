@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400,300|Arvo:700);
+
+body {
+	font-family: Georgia, serif;
+	font-size: 12pt;
+	background-color: white;
+}
+
+body > header {
+	display: flex;
+	font-family: 'Open Sans', Arial, sans-serif;
+	padding: 1em;
+	justify-content: space-between;
+	border-bottom: 3px double #888;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h2 {
+	font-weight: 300;
+}
+
+address a:link {
+	text-decoration: none;
+}
+
+@media screen {
+	html {
+		background-color: #EEE;
+	}
+	body {
+		max-width: 8.5in;
+		margin: 0 auto;
+		box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3);
+	}
+	body > header {
+		background-color: #333;
+		color: #EEE;
+	}
+
+	body > header a:link {
+		color: #6CB8FF;
+	}
+}
+
+@media screen and (min-width:8.5in) {
+	body {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+@media print {
+	body {
+		font-size: 11pt;
+	}
+	a:link, a:visited {
+		color: black;
+	}
+
+	/*
+	.work-experience, .education, .project, .skills {
+		page-break-inside: avoid;
+	}
+	*/
+
+}
+
+section {
+	padding: 0.5rem 1rem;
+}
+
+section, body > header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+header h1, header h2, header address {
+	margin: 0 1rem;
+}
+
+footer {
+	margin-top: 1rem;
+	font-size: 0.8em;
+}
+
+section > header {
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	width: 1.5in;
+	padding-right: 1em;
+	box-sizing: border-box;
+}
+
+section > .content {
+	flex: 1 1 auto;
+	flex-basis: 4in;
+}
+
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+ul.columns {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+ul.columns li {
+	flex-basis: 50%;
+	flex-grow: 1;
+}
+
+.education + .education, .work-experience + .work-experience, .project + .project {
+	margin-top: 1em;
+}
+
+.employer, .school, .project-name {
+	font-variant: small-caps;
+}
+
+.location{
+	float: right;
+	font-weight: 300;
+	margin-left: 1ex;
+}
